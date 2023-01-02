@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/e1fda8ee0b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header" id="Home">
+
+    
+    <nav>
+      <a class="brand" href="#"><span class="resume">R</span>esume</a>
+      <ul id="sidemenu">
+        <li><a href="#Home" onclick="closemenu()">Home</a></li>
+        <li><a href="#about" onclick="closemenu()" >About</a></li>
+         <li><a href="#interests" onclick="closemenu()">Interests</a></li>
+        <li><a href="#projects" onclick="closemenu()">Projects</a></li>
+        <!-- <li><a href="#projects">Projects</a></li> -->
+        <li><a href="#Contact" onclick="closemenu()">Contact</a></li>
+        <i class="fa-solid fa-xmark hidden toggle" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars hidden menu" onclick="openmenu() "></i>
+     
+    </nav>
+    <div class="container"  onclick="closemenu()">
+      <div class="header-text" >
+        <i class="fa-solid fa-laptop-code show"></i>
+        <p>Front-End Developer</p>
+        <h1>Hi,I'm <span>kanagasabai</span> J</h1>
+        <a href="./document/kanagasabai-Resume.pdf" class="btn btn2" target="_blank" download>Download Cv</a>
+        <!-- <a href="./document/kanagasabai-Resume.pdf" target="blank" download><span></span>DOWNLOAD CV</a> -->
+      </div>
+    </div>
+  
+  </div>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <h1 class="sub-title">About Me</h1>
+          <p class="description">Looking for a position as Front-End Developer. I am capable
+            of continuous learning from seniors as well as facilitating
+            project from concept to launch. Eager to tackle more
+            complex problems and continue to find ways to maximze
+            user efficiency</p>
+        </div>
+        <div class="about-col-2">
+          <div class="tab-title skills">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <section id="skillsection">
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li> <span>Front-End Developer</span> <br>HTML, CSS, Bootstrap, Framework7, Javascript</li>
+                <li> <span>Programming Languages</span> <br>Java, Sql</li>
+
+              </ul>
+
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li> <span>2013-2017</span> <br>Btech Civil Engineering, CGPA:7.23, Sri Manakula Vinayagar Engineering College,Puducherry</li>
+                <li> <span>HSC</span> <br>Percentage:85%, SRVS National Higher Secondary School,Karaikal</li>
+                <li>
+                  <span>SSLC</span><br>Percentage:79%, Swami Vivekananda Higher Secondary School,Karaikal
+                </li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Skills description -->
+  <section id="interests">
+    <div id="certification-interests">
+      <div class="container ">
+        <h1 class="sub-title">Certification and Interests </h1>
+        <div class="grid-col">
+          <div>
+            <i class="fa-solid fa-laptop-code icon"></i>
+            <h2>Certification</h2>
+            <p>
+              Java <br>Javascript
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-robot icon"></i>
+            <h2>Interests</h2>
+            <p>
+              Data science
+              <br> Artificial Intelligence
+
+            </p>
+          </div>
+  </section>
+  </div>
+  </div>
+  </div>
+  <div id="projects">
+    <div class="container">
+     <h1 class="sub-title">My Projects</h1>
+     <div class= "project-list">
+       <div class="project">
+         <i class="fa-solid fa-bars-progress"></i>
+         <div class="layer">
+           <h3>Work In Progress</h3>
+           <a href="#Projects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+         </div>
+       </div>
+       <div class="project">
+         <i class="fa-solid fa-bars-progress"></i>
+         <div class="layer">
+           <h3>Work In Progress</h3>
+           <a href="#Projects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+         </div>
+       </div>
+       <div class="project">
+         <i class="fa-solid fa-bars-progress"></i>
+         <div class="layer">
+           <h3>Work In Progress</h3>
+           <a href="#Projects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+         </div>
+       </div>
+     </div>
+     <!-- <a href="#" class="btn">See More</a> -->
+
+    </div>
+  </div>
+    <!-- ------Contact--------- -->
+    <div id="Contact">
+      <div class="container">
+        <div class="row">
+         <div class="Contact-left">
+         <h1>Contact Me</h1>
+         <p>
+          <i class="fa-solid fa-paper-plane"></i>  rjrrkanagasabai96@gmail.com
+         </p>
+         <p>
+          <i class="fa-solid fa-phone"></i>  +918300631817
+         </p>
+         <div class="social-icon">
+           <a href="https://www.linkedin.com/in/kanagasabai-j-200562248" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+           <a href="https://github.com/rjrkanagasabai" target="_blank"><i class="fa-brands fa-github"></i></a>
+         </div>
+       </div>
+         <div class="Contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name"required autocomplete="off">
+            <input type="email" name="Email" placeholder="Your Mail"required autocomplete="off" >
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+  
+          </form>
+          <span id="msg"></span>
+         </div>
+        </div>
+      </div>
+    </div>
+ 
+
+
+  <script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwxDk56u3aGy8TwI135Cl6jzFIzr2hAGeEMCm36DgyBUBPbEhv2N6_ac0_HUpexnWV2TA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg =document.getElementById('msg')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML=""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+<script>
+   let sidemenu=document.getElementById('sidemenu');
+    
+   
+   function openmenu(){
+    sidemenu.style.right='0';
+   }
+
+   function closemenu(){
+    sidemenu.style.right='-200px';
+  }
+   document.addEventListener('click',function handleClick(event){
+  
+    if(sidemenu.contains(event.target)){
+   closemenu();
+    }
+    
+  });
+  
+
+</script>
+
+</body>
+
+</html>
