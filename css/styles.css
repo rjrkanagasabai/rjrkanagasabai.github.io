@@ -446,4 +446,9 @@ nav .hidden {
   html {
     scroll-behavior: smooth;
   }
+  #msg {
+    margin-top: -60px;
+    margin-bottom: 80px;
+    margin-left: 150px;
+  }
 }
