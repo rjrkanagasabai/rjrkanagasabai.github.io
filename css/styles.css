@@ -94,6 +94,7 @@ nav ul li a:hover::after {
 }
 .description {
   padding-top: 10px;
+  text-align: justify;
 }
 
 .row {
@@ -453,5 +454,8 @@ nav .hidden {
   }
   nav ul li a::after {
     display: none;
+  }
+  .description {
+    text-align: justify;
   }
 }
