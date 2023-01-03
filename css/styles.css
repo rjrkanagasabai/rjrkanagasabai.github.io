@@ -451,4 +451,7 @@ nav .hidden {
     margin-bottom: 80px;
     margin-left: 150px;
   }
+  nav ul li a::after {
+    display: none;
+  }
 }
