@@ -70,7 +70,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-  width: 100%;
+  width: 50%;
 }
 
 .header-text {
@@ -86,6 +86,10 @@ nav ul li a:hover::after {
 
 .header-text h1 span {
   color: #ff3333;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 /* ---about--- */
@@ -341,6 +345,20 @@ form .btn2 {
   margin-top: -80px;
   display: block;
 }
+.btn--text {
+  margin-left: 500px;
+  display: inline-block;
+  background: none;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: #00aeff;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 
 /* ----------media screen------ */
 nav .hidden {
@@ -351,6 +369,9 @@ nav .hidden {
 }
 
 @media only screen and (max-width: 600px) {
+  .btn--text {
+    visibility: hidden;
+  }
   .show {
     visibility: inherit;
     margin-left: 100px;

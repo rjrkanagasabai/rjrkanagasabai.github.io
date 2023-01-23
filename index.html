@@ -13,16 +13,16 @@
   <div id="header" id="Home">
 
     
-    <nav>
+    <nav class="nav">
       
       <a class="brand" href="#"><span class="resume">R</span>esume</a>
-      <ul id="sidemenu">
-        <li><a href="#Home" onclick="closemenu()">Home</a></li>
-        <li><a href="#about" onclick="closemenu()" >About</a></li>
-         <li><a href="#interests" onclick="closemenu()">Interests</a></li>
-        <li><a href="#projects" onclick="closemenu()">Projects</a></li>
+      <ul id="sidemenu" class="ac-links">
+        <li><a class="ac-link"href="#Home"  onclick="closemenu()">Home</a></li>
+        <li><a class="ac-link" href="#about" onclick="closemenu()" >About</a></li>
+         <li><a class="ac-link" href="#interests" onclick="closemenu()">Interests</a></li>
+        <li><a class="ac-link" href="#projects" onclick="closemenu()">Projects</a></li>
         <!-- <li><a href="#projects">Projects</a></li> -->
-        <li><a href="#Contact" onclick="closemenu()">Contact</a></li>
+        <li><a class="ac-link" href="#Contact" onclick="closemenu()">Contact</a></li>
         <i class="fa-solid fa-xmark hidden toggle" onclick="closemenu()"></i>
       </ul>
       <i class="fa-solid fa-bars hidden menu" onclick="openmenu() "></i>
@@ -34,13 +34,15 @@
         <p>Front-End Developer</p>
         <h1>Hi,I'm <span>kanagasabai</span> J</h1>
         <a href="./document/Kanagasabai-Resume.pdf" class="btn btn2" target="_blank" download>Download Cv</a>
+        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
     
       </div>
     </div>
   
   </div>
+  <section class="section">
   <div id="about">
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="about-col-1">
           <h1 class="sub-title">About Me</h1>
@@ -61,6 +63,7 @@
                 <li> <span>Front-End Developer</span> <br>HTML, CSS, Bootstrap, Framework7, Javascript</li>
                 <li> <span>Programming Languages</span> <br>Java, Sql</li>
 
+             
               </ul>
 
             </div>
@@ -80,10 +83,11 @@
       </div>
     </div>
   </div>
+</section>
   <!-- Skills description -->
-  <section id="interests">
+  <section id="interests" class="section">
     <div id="certification-interests">
-      <div class="container ">
+      <div class="container ">"
         <h1 class="sub-title">Certification and Interests </h1>
         <div class="grid-col">
           <div>
@@ -106,7 +110,8 @@
   </div>
   </div>
   </div>
-  <div id="projects">
+  <section class="section">
+  <div id="projects ">
     <div class="container">
      <h1 class="sub-title">My Projects</h1>
      <div class= "project-list">
@@ -136,7 +141,9 @@
 
     </div>
   </div>
+  <!-- </section>  -->
     <!-- ------Contact--------- -->
+    <!-- <section class="section"> -->
     <div id="Contact">
       <div class="container">
         <div class="row">
@@ -166,7 +173,60 @@
         </div>
       </div>
     </div>
- 
+    </section>
+    <!-- <script>
+      const nav = document.querySelector('.nav');
+      const handleOver = function (e) {
+  if (e.target.classList.contains('ac-link')) {
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.ac-link');
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+  }
+};
+nav.addEventListener('mouseover', handleOver.bind(0.5));
+
+nav.addEventListener('mouseout', handleOver.bind(1));
+    </script> -->
+   
+    <script>
+      const allSection=document.querySelectorAll('.section')
+      const revealSection= function(entries,observer){
+      const [entry]=entries;
+      console.log(entry);
+      if(!entry.isIntersecting) return;
+      entry.target.classList.remove('section--hidden');
+      observer.unobserve(entry.target);
+      }
+      const sectionObserver =new IntersectionObserver(revealSection,{
+        root:null,
+        threshold:0.15,
+      })
+      allSection.forEach(function(section){
+        sectionObserver.observe(section);
+        
+        section.classList.add('section--hidden');
+      })
+    </script>
+    <script>
+      document.querySelector('ac-links').addEventListener('click',function(e){
+        e.preventDefault();
+        if(e.target.classList.contains('ac-link')){
+          const getId= e.target.getAttribute('href');
+          document.querySelector(getId).scrollIntoView({behavior:'smooth'})
+        }
+      })
+    </script>
+    <script>
+      const btnScrollTo = document.querySelector('.btn--scroll-to');
+      const sectionScrol= document.querySelector('#about');
+      btnScrollTo.addEventListener('click',function(e){
+        
+        sectionScrol.scrollIntoView({ behavior: 'smooth' });
+      })
+    </script>
+
 
 
   <script>
@@ -223,6 +283,12 @@
   });
   
 
+</script>
+<script>
+  window.addEventListener('beforeunload',function(e){
+    e.preventDefault()
+    e.returnValue='';
+  })
 </script>
 
 </body>
