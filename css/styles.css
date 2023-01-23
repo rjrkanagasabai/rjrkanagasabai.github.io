@@ -370,7 +370,7 @@ nav .hidden {
 
 @media only screen and (max-width: 600px) {
   .btn--text {
-    visibility: hidden;
+    display: none;
   }
   .show {
     visibility: inherit;
